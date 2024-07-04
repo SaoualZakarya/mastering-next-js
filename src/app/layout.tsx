@@ -6,8 +6,8 @@ import { Metadata } from 'next';
 const inter = Inter({subsets:['latin']});
 
 export const metaData:Metadata ={
-  title:"WikiRocket!",
-  description:"WikiRocket! information"
+  title:"Zakarya's blog",
+  description:"More information about Zakarya blogs"
 } 
 
 export default function RootLayout({
