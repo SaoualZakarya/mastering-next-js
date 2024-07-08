@@ -14,8 +14,10 @@ export async function  GET(req:Request,{params:{id}}:Props)  {
 
     const origin = req.headers.get('origin')
 
+    // The number of the remaining requests
+    // This will apply the request limiter on this API
     const remaining = await limiter.removeTokens(1);
-    console.log('remaining',remaining)
+
     if( remaining <= 0 ){
         return new NextResponse(null,{
             status:429,

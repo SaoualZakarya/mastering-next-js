@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+// This is the allowed list that we will use as cors 
+// So we don't need to install cors 
 const allowedOrigins = process.env.NODE_ENV === 'production' ? 
     ['https://yoursite.com','https://www.yoursite.com']
     : ['http://localhost:3000','http://127.0.0.1:3000']
@@ -18,6 +20,8 @@ export function middleware (req:Request) {
         })
     }
 
+    // With this regex you can do the same as < the config and matcher >
+    // To specify in which routes the middleware will be applied
     // const regex = new RegExp('/api/*')
     // if(regex.test(req.url)){ 
     // }
@@ -25,13 +29,14 @@ export function middleware (req:Request) {
     // }
 
     // console.log('middleware')
-    // console.log(req.method)
-    // console.log(req.url)
-    // console.log(origin)
+
     return NextResponse.next()
     
 }
 
+// This will specify in which route the middleware will be applied
+// Because by default the middleware will be applied on the whole
+// Routes of the application
 export const config ={
     matcher:'/api/:path*'
 }
