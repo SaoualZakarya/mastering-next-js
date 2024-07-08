@@ -65,8 +65,7 @@ export async function  PUT(req:Request)  {
     if(!userId || !title || !id || typeof(complete) !== 'boolean' ){
         return NextResponse.json({"message":"Missing required data"})
     }
-    const res = await fetch(`${DATA_SOURCE_URL}/${id}`, 
-        {
+    const res = await fetch(`${DATA_SOURCE_URL}/${id}`, {
             method:'PUT',
             headers:{
                 'Content-Type':'application/json',
