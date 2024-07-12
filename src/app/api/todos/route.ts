@@ -4,7 +4,7 @@ const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos"
 
 const API_KEY : string = process.env.DATA_API_KEY as string ;
 
-export async function  GET(req:Request)  {
+ export async function  GET(req:Request)  {
     const data = await fetch(DATA_SOURCE_URL) ;
 
     if(!data.ok){
