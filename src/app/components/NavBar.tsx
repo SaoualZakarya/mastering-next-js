@@ -1,10 +1,17 @@
-import Link from 'next/link'
-export const NavBar = () => {
-  return (
-    <nav className='py-4 shadow-2xl drop-shadow-2xl px-3 bg-slate-500 flex sm:justify-around items-center justify-center ms:gap-0 gap-6 '>
-        <h1 className='text-[16px] sm:text-[22px] font-bold'>
-            <Link className='' href={'/'}>Zakary saoual</Link>
-        </h1>
-    </nav>
-  )
+import Link from "next/link"
+
+export default function Navbar() {
+    return (
+        <nav className="bg-slate-600 p-4 sticky top-0 drop-shadow-xl z-10">
+
+            <div className="max-w-xl mx-auto sm:px-4 flex justify-between">
+                <h1 className="text-3xl font-bold mb-0">
+                    <Link  href="/" className="text-white/90 no-underline hover:text-white">Next Todos</Link>
+                </h1>
+
+                <Link href="/add" className="text-2xl text-white/90 no-underline hover:text-white">Add</Link>
+
+            </div>
+        </nav>
+    )
 }

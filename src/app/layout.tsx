@@ -1,14 +1,10 @@
 import './globals.css'
-import {Inter} from 'next/font/google'
-import { NavBar } from './components/NavBar';
-import { Metadata } from 'next';
+import Navbar from "./components/Navbar"
 
-const inter = Inter({subsets:['latin']});
-
-export const metaData:Metadata ={
-  title:"Zakarya's blog",
-  description:"More information about Zakarya blogs"
-} 
+export const metadata = {
+  title: 'Next Todos',
+  description: 'Created for practice',
+}
 
 export default function RootLayout({
   children,
@@ -17,12 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/logo.png"></link>
-      </head>
-      <body className={inter.className}>
-        <NavBar/>
-        {children}
+      <body className="dark:bg-slate-800">
+        <Navbar />
+        <main className="mx-auto max-w-xl p-4 bg-stone-200 min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   )

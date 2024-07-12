@@ -1,0 +1,46 @@
+{
+  "todos": [
+    {
+      "userId": 1,
+      "title": "Wave hello! 👋",
+      "completed": false,
+      "id": "1"
+    },
+    {
+      "userId": 1,
+      "title": "Get Coffee ☕☕☕",
+      "completed": false,
+      "id": "2"
+    },
+    {
+      "userId": 1,
+      "title": "Go to Work ⚒",
+      "completed": false,
+      "id": "3"
+    },
+    {
+      "userId": 1,
+      "title": "Write Code 💻",
+      "id": "4",
+      "completed": false
+    },
+    {
+      "id": "c1a9",
+      "userId": 1,
+      "title": "add todo",
+      "completed": true
+    },
+    {
+      "id": "c29c",
+      "userId": 1,
+      "title": "shit",
+      "completed": true
+    },
+    {
+      "id": "9a5e",
+      "userId": 1,
+      "title": "add new ",
+      "completed": false
+    }
+  ]
+}
